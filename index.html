@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slime-Shop</title>
+    <link rel="icon" href="./assets/img/sls.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="navbar hide-on-mobile-tablet">
+                    <ul class="navbar__list">
+                        <li class="navbar__items navbar__items-border">
+                            Vào cửa hàng trên ứng dụng Slime Shop
+                            <div class="navbar-qr"></div>
+                        </li>
+                        <li class="navbar__items">
+                            <span class="navbar-no-pointer"> Kết Nối</span>
+                            <a href="" class="navbar-icon">
+                                <i class="h-nabar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="" class="navbar-icon">
+                                <i class="h-nabar-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="navbar__list">
+                        <li class="navbar__items navbar__items-noti"> <a href="" class="navbar__items-link">
+                            <i class="navbar-icon h-nabar-icon fas fa-bell"></i> Thông Báo</a>
+                            <div class="nav-noti">
+                                <header class="nav-noti-header">
+                                    <h3>Thông Báo Gần Đây</h3>
+                                </header>
+                                <ul class="nav-noti-list">
+                                    <li class="nav-noti-items">
+                                        <a href="" class="nav-noti-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="nav-noti-img">
+                                            <div class="nav-noti-info">
+                                                <span class="nav-noti-name">RTX 3060</span>
+                                                <span class="nav-noti-cmt">Xác Thực Nguồn Gốc</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-noti-items">
+                                        <a href="" class="nav-noti-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="nav-noti-img">
+                                            <div class="nav-noti-info">
+                                                <span class="nav-noti-name">RTX 3060</span>
+                                                <span class="nav-noti-cmt">Xác Thực Nguồn Gốc</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-noti-items">
+                                        <a href="" class="nav-noti-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="nav-noti-img">
+                                            <div class="nav-noti-info">
+                                                <span class="nav-noti-name">RTX 3060 đắt tiền quá trời quá đất luôn á trời bán cắt cổ</span>
+                                                <span class="nav-noti-cmt">Xác Thực Nguồn Gốc</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="nav-noti-end">
+                                    <a href="" class="nav-noti-end-btn">Xem tất cả</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navbar__items"> <a href="" class="navbar__items-link">
+                            <i class=" navbar-icon h-navbar-icon far fa-question-circle"></i> Trợ Giúp</a> </li>
+                        <!-- <li class="navbar__items navbar__items-bold navbar__items-border">Đăng Kí</li>
+                        <li class="navbar__items navbar__items-bold">Đăng Nhập</li> -->
+                        <li class="navbar__items navbar-user">
+                            <img src="https://st.ntcdntempv3.com/data/sites/1/useravatars/815953.jpg?v=3522" alt="" class="navbar-user-img">
+                            <span class="navbar-user-name">Slime</span>
+
+                            <ul class="navbar-user-menu">
+                                <li class="navbar-user-item">
+                                    <a href="">Trang Cá Nhân</a>
+                                </li>
+                                <li class="navbar-user-item">
+                                    <a href="">Địa Chỉ</a>
+                                </li>
+                                <li class="navbar-user-item">
+                                    <a href="">Đăng Xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="with-search">
+                    <label for="mb-check" class="search-mobile l-0 m-0">
+                        <i class="fas fa-search"></i>
+                    </label>
+                    <div class="logo hide-on-tablet">
+                        <a href="" class="logo-home">
+                            <img class="logo-img" src="./assets/img/ss.png" alt="">
+                        </a>
+                    </div>
+
+                    <input type="checkbox" hidden id="mb-check" class="mb-check-show">
+
+                    <div class="search">
+                        <div class="search-input-wrap">
+                            <input type="text" class="search-input" placeholder="Tìm Kiếm Sản Phẩm...">
+                            <!-- search history -->
+                            <div class="search-history">
+                                <h3 class="search-history-heading">Lịch Sử Tìm Kiếm</h3>
+                                <ul class="search-history-list">
+                                    <li class="search-history-item">
+                                        <a href="">RTX-3060</a>
+                                    </li>
+                                    <li class="search-history-item">
+                                        <a href="">RTX-3090</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-select">
+                            <span class="search-select-label">Trong Shop</span>
+                            <i class="fas fa-angle-down select-icon"></i>
+
+                            <ul class="search-option">
+                                <li class="search-option-items option-active">
+                                    <span>Trong Shop</span>
+                                        <i class="fas fa-check"></i>
+                                </li>
+                                <li class="search-option-items">
+                                    <span>Ngoài Shop</span>
+                                        <i class="fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="search-btn">
+                            <i class="fas fa-search search-icon-btn"></i>
+                        </button>
+                    </div>
+
+                    <!-- cart -->
+                    <div class="cart">
+                        <div class="cart-wrap">
+                            <i class="fas fa-shopping-cart cart-icon"></i>
+                            <span class="cart-notice">3</span>
+                            <!-- no cart add  .cart-no-list-->
+                        <div class="cart-list">
+                            <img src="./assets/img/no-cart.png" alt="" class="img-no-cart">
+                            <span class="cart-list-mes">Chưa Có Sản Phẩm</span>
+
+                            <h4 class="cart-heading">Sản Phẩm Đã Thêm</h4>
+                            <ul class="cart-list-items">
+                                <!-- cart item -->
+                                <li class="cart-item">
+                                    <img src="./assets/img/sls.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Logo Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">10.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/sls.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Logo Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">10.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/ss.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Ảnh Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">20.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">10</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/sls.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Logo Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">10.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/sls.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Logo Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">10.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/ss.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Ảnh Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">20.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">10</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/sls.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Logo Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">10.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/sls.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Logo Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">10.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-item">
+                                    <img src="./assets/img/ss.png" alt="" class="img-cart">
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-head">
+                                            <h5 class="cart-item-name">Bộ Ảnh Slime Shop</h5>
+                                            <div class="cart-item-gia">
+                                                <span class="cart-item-price">20.000đ</span>
+                                                <span class="cart-item-multiply">x</span>
+                                                <span class="cart-item-qnt">10</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item-body">
+                                            <span class="cart-item-mota">Loại: Dán Được</span>
+                                            <span class="cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="" class="cart-show btn btn-primary">Xem giỏ hàng</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="sort-bar">
+                <li class="sort-item sort-item-active">
+                    <a href="" class="sort-link">Liên Quan</a></li>
+                <li class="sort-item">
+                    <a href="" class="sort-link">Mới Nhât</a></li>
+                <li class="sort-item">
+                    <a href="" class="sort-link">Bán Chạy</a></li>
+                <li class="sort-item">
+                    <a href="" class="sort-link">Giá</a></li>
+            </ul>
+        </header>
+
+        <div class="main__container">
+           <div class="grid wide">
+            <div class="row sm-gutter main__content">
+                <div class="col l-2 m-0 c-0">
+                    <nav class="category">
+                        <h3 class="category-heading">DANH MỤC</h3>
+                        <ul class="category-list">
+                            <li class="category-item category-item--active">
+                                <a href="" class="category-item-link">Thiết Bị Điện Tử</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">Thiết Bị Động Cơ</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">Thiết Bị Di Động</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col l-10 m-12 c-12">
+                    <div class="home-filter hide-on-mobile-tablet">
+                        <span class="filter-title">Sắp Xếp Theo</span>
+                        <button class="filter-btn btn">Phổ Biến</button>
+                        <button class="filter-btn btn btn-primary">Mới Nhất</button>
+                        <button class="filter-btn btn">Bán Chạy</button>
+
+                        <div class="select-input">
+                            <span class="select-input-label">Giá</span>
+                            <i class="fas fa-angle-down select-icon"></i>
+                            <ul class="select-input-list">
+                                <li class="select-input-item">
+                                    <a href="" class="select-input-link">Giá: Thấp Đến Cao</a>
+                                </li>
+                                <li class="select-input-item">
+                                    <a href="" class="select-input-link">Giá: Cao Đến Thấp</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="home-filter-page">
+                            <span class="page-num">
+                                <span class="page-current">1</span>/12
+                            </span>
+
+                            <div class="home-filter-page-control">
+                                <a href="" class="page-btn page-btn-disabled">
+                                    <i class="page-icon fas fa-angle-left"></i>
+                                </a>
+                                <a href="" class="page-btn">
+                                    <i class="page-icon fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="mb-category l-0 m-0">
+                        <ul class="mb-category-list">
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                            <li class="mb-category-item">
+                                <a href="" class="mb-category-link">Dụng cụ & thiết bị điện tử</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="product">
+                        <div class="row sm-gutter">
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2-4 m-3 c-6">
+                                <a href="" class="product-item">
+                                    <div class="product-item-img" style="background-image: url(	https://down-vn.img.susercontent.com/file/af4700c8310b904824b6eaf53120f604_tn);"></div>
+                                    <h3 class="product-item-name">Tai nghe bluetooth không dây I7S TWS có micro hỗ trợ tập thể thao thích hợp cho Apple IPhone Xiaomi</h3>
+                                    <div class="product-item-price">
+                                        <span class="product-item-price-old">100.000đ</span>
+                                        <span class="product-item-price-current">50.000đ</span>
+                                    </div>
+                                    <div class="product-item-action">
+                                        <span class=" product-item-like product-item-like-liked">
+                                            <i class="like-icon-empty far fa-heart"></i>
+                                            <i class="like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-item-rating">
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star star-gold"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-item-sold">1,6k đã bán</span>
+                                    </div>
+                                    <div class="product-item-origin">
+                                        <span class="product-item-brand">Ohui</span>
+                                        <span class="product-item-origin-name">Trung Quốc</span>
+                                    </div>
+                                    <div class="product-item-favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu Thích</span>
+                                    </div>
+                                    <div class="product-item-sale">
+                                        <span class="product-item--sale-percent">50%</span>
+                                        <span class="product-item-sale-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="product-pagination pagination">
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">
+                                <i class="pagination-icon fas fa-angle-left"></i>
+                            </a>
+                        </li>
+                        <li class="pagination-item pagination-item-active">
+                            <a href="" class="pagination-item-link">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">2</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">3</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">4</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">5</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">...</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">12</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="" class="pagination-item-link">
+                                <i class="pagination-icon fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid wide footer-content">
+                <div class="row">
+                    <div class="col l-2-4 m-3 c-6">
+                        <h3 class="footer-heading">Chăm Sóc Khách Hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Trợ Giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Slime-Shop</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Hướng Dẫn Mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <h3 class="footer-heading">Giới Thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Giới Thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Tuyển Dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Điều Khoàn</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <h3 class="footer-heading">Danh Mục</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Thiết Bị Điện Tử</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Thiết Bị Động Cơ</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">Thiết Bị Di Động</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <h3 class="footer-heading">Theo Dõi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">
+                                    <i class="footer-icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">
+                                    <i class="footer-icon fab fa-instagram"></i>
+                                    Insatagram</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item-link">
+                                    <i class="footer-icon fab fa-linkedin"></i>
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-5 c-12">
+                        <h3 class="footer-heading">Vào Cửa Hàng Trên Ứng Dụng</h3>
+                        <div class="footer-app">
+                            <img src="data:image/png;base64,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" alt="Download QR" class="footer-qr">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-end">
+                <div class="grid wide">
+                    <p class="footer-text">@2023 - Công Ty Thuộc Bản Quyền Slime Shop</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    
+    <!-- <div class="modal">
+        <div class="modal__e"></div>
+        <div class="modal-body"> -->
+            <!-- Register -->
+                <!-- <div class="log">
+                    <div class="log-header">
+                        <h3 class="log-heading">Đăng Kí</h3>
+                        <span class="log-switch-btn">Đăng Nhập</span>
+                    </div>
+
+                <div class="log-form">
+                    <div class="log-group">
+                        <input type="text" class="log-input" placeholder="Nhập Email...">
+                    </div>
+                    <div class="log-group">
+                        <input type="password" class="log-input" placeholder="Nhập Mật Khẩu...">
+                    </div>
+                    <div class="log-group">
+                        <input type="password" class="log-input" placeholder="Nhập Lại Mật Khẩu...">
+                    </div>
+                </div>
+                <p class="log-text">
+                    <a href="" class="log-text-link">Điều Khoản Dịch Vụ</a> &
+                    <a href="" class="log-text-link">Chính Sách Bảo Mật</a>
+                </p>
+
+                <div class="log-controls">
+                    <button class="btn btn-normal btn-back">Trở Lại</button>
+                    <button class="btn btn-primary">Đăng Kí</button>
+                </div>
+
+                <div class="log-social">
+                    <a href="" class="log-social-fb btn btn-s btn-with-icon">
+                        <i class="log-social-icon fab fa-facebook-square"></i>
+                           Kết Nối Với Facebook
+                    </a>
+                    <a href="" class="log-social-gg btn btn-s btn-with-icon">
+                        <i class="log-social-icon fab fa-google"></i>
+                        Kết Nối Với Google
+                    </a>
+                </div>
+                </div> -->
+
+                <!-- Login -->
+                <!-- <div class="log">
+                    <div class="log-header">
+                        <h3 class="log-heading">Đăng Nhập</h3>
+                        <span class="log-switch-btn">Đăng Kí</span>
+                    </div>
+
+                <div class="log-form">
+                    <div class="log-group">
+                        <input type="text" class="log-input" placeholder="Nhập Email...">
+                    </div>
+                    <div class="log-group">
+                        <input type="password" class="log-input" placeholder="Nhập Mật Khẩu...">
+                    </div>
+                </div>
+                <p class="log-text-help">
+                    <a href="" class="log-text-help-link">Cần Trợ Giúp?</a>
+                    <a href="" class="log-text-help-link">Quên Mật Khẩu</a>
+                </p>
+
+                <div class="log-controls">
+                    <button class="btn btn-normal btn-back">Trở Lại</button>
+                    <button class="btn btn-primary">Đăng Nhập</button>
+                </div>
+
+                <div class="log-social">
+                    <a href="" class="log-social-fb btn btn-s btn-with-icon">
+                        <i class="log-social-icon fab fa-facebook-square"></i>
+                           Đăng Nhập Với Facebook
+                    </a>
+                    <a href="" class="log-social-gg btn btn-s btn-with-icon">
+                        <i class="log-social-icon fab fa-google"></i>
+                        Đăng Nhập Với Google
+                    </a>
+                </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
