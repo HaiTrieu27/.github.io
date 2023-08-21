@@ -442,6 +442,7 @@
 
 .logo {
     width: 200px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .logo-home {
@@ -490,6 +491,7 @@
     padding-left: 16px;
     position: relative;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .search-select-label {
@@ -514,6 +516,7 @@
     margin-right: 3px;
     outline: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .search-btn:hover {
@@ -556,7 +559,6 @@
 .search-option-items {
     background-color: var(--white-color);
     padding: 8px;
-    margin-top: 4px;
 }
 
 .search-option-items:first-child {
@@ -907,12 +909,13 @@
     height: 3px;
     background-color: var(--main-color);
     border-radius: 10px;
+    margin-top: -3px;
 }
 
 
 /* Main Container */
 .main__container {
-    background-color: #e1e1e1;
+    background-color: #f5f5f5;
 }
 
 .main__content {
@@ -1348,5 +1351,4 @@ i.like-icon-fill {
     margin: 0;
     font-size: 1.4rem;
     color: #757575;
-}
-
+}    
