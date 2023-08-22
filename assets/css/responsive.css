@@ -1,9 +1,5 @@
 /* Mobile, Tablet */
 @media (max-width: 1023px) {
-    :root {
-        --navbar-height: 0px;
-        --header-height: 70px;
-    }
     .hide-on-mobile-tablet {
         display: none;
     }
@@ -37,6 +33,10 @@
 
 /* Tablet */
 @media (min-width:740px) and (max-width: 1023px) {
+    :root {
+        --navbar-height: 0px;
+        --header-height: 70px;
+    }
     .hide-on-tablet {
         display: none;
     }
@@ -48,6 +48,10 @@
 
 /* Mobile */
 @media (max-width: 739px) {
+    :root {
+        --navbar-height: 0px;
+        --header-height: 60px;
+    }
     .hide-on-mobile {
         display: none;
     }
@@ -100,5 +104,11 @@
             opacity: 1;
             top: var(--header-height);
         }
+    }
+    .footer-heading {
+        text-align: center;
+    }
+    .footer-item-link {
+        justify-content: center;
     }
 }
