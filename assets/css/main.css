@@ -36,7 +36,6 @@
 .navbar-user-name {
     margin-left: 8px;
     font-size: 1.4ren;
-    font-weight: 400;
 }
 
 .navbar-user-menu {
@@ -139,7 +138,7 @@
 }
 
 .navbar__items-bold {
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .navbar__items-border::after {
@@ -1351,4 +1350,4 @@ i.like-icon-fill {
     margin: 0;
     font-size: 1.4rem;
     color: #757575;
-}    
+}
